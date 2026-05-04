@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | India Avenue</title>
+<meta name="description" content="Explore the exquisite menu at India Avenue - featuring authentic Indian cuisine from kebabs and curries to tandoor specialties, breads, and desserts.">
+<meta property="og:title" content="Menu | India Avenue" />
+<meta property="og:description" content="Explore the exquisite menu at India Avenue - featuring authentic Indian cuisine from kebabs and curries to tandoor specialties, breads, and desserts." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://example.com/menu.html" />
+<meta property="og:image" content="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/c1012a6d-a02d-4c0e-bef9-a165a94764eb/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1770927826_pk3e4c.jpeg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Menu | India Avenue" />
+<meta name="twitter:description" content="Explore the exquisite menu at India Avenue - featuring authentic Indian cuisine from kebabs and curries to tandoor specialties, breads, and desserts." />
+<meta name="twitter:image" content="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/c1012a6d-a02d-4c0e-bef9-a165a94764eb/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1770927826_pk3e4c.jpeg" />
+<!-- Replace https://example.com/ with your live site URL (must match robots.txt + sitemap.xml). -->
+<link rel="canonical" href="https://example.com/menu.html" />
+<link rel="icon" href="https://quseprdus1.blob.core.windows.net/kora-business-images/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368_1768782091.png" type="image/png" />
+<link rel="shortcut icon" href="https://quseprdus1.blob.core.windows.net/kora-business-images/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368_1768782091.png" type="image/png" />
+<link rel="apple-touch-icon" href="https://quseprdus1.blob.core.windows.net/kora-business-images/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368_1768782091.png" />
+<link rel="preload" as="image" href="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/c1012a6d-a02d-4c0e-bef9-a165a94764eb/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1770927826_pk3e4c.jpeg" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","@id":"https://example.com/menu.html#webpage","url":"https://example.com/menu.html","name":"Menu | India Avenue","description":"Explore the exquisite menu at India Avenue - featuring authentic Indian cuisine from kebabs and curries to tandoor specialties, breads, and desserts.","isPartOf":{"@type":"WebSite","name":"India Avenue","url":"https://example.com/"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand-red: #E31E24;
+  --brand-gold: #FDB813;
+  --brand-orange: #F5A623;
+  --brand-navy: #1a0505;
+  --bg: #000000;
+  --bg-elevated: #0d0d0d;
+  --surface: #141414;
+  --text: #f5f5f0;
+  --text-muted: #9a9a90;
+  --text-dim: #5c5c54;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--bg); color: var(--text); overflow-x: hidden; }
+::selection { background: var(--brand-red); color: #fff; }
+
+.noise { position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Nav */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; transition: all 0.5s var(--ease-expo); }
+.nav.scrolled { background: rgba(10,10,10,0.85); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); padding: 1rem 3rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text); }
+.nav-brand img { height: 38px; width: auto; }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2.5px; transition: color 0.4s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 1px; background: var(--brand-red); transition: width 0.4s var(--ease-expo); }
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+.nav-links a.active { color: var(--text); }
+.nav-cta { padding: 0.65rem 1.8rem; border: 1px solid rgba(245,245,240,0.2); border-radius: 100px; color: var(--text); text-decoration: none; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; transition: all 0.4s var(--ease-expo); background: transparent; }
+.nav-cta:hover { background: var(--brand-red); border-color: var(--brand-red); transform: scale(1.05); }
+.nav-mobile-btn { display: none; background: none; border: none; color: var(--text); cursor: pointer; }
+
+.mobile-nav { position: fixed; inset: 0; z-index: 1002; background: var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; opacity: 0; pointer-events: none; transition: opacity 0.5s; }
+.mobile-nav.open { opacity: 1; pointer-events: all; }
+.mobile-nav a { font-family: var(--font-serif); font-size: 2rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.mobile-nav a:hover, .mobile-nav a.active { color: var(--brand-red); }
+.mobile-nav-close { position: absolute; top: 1.25rem; right: 1.25rem; z-index: 10; min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center; background: none; border: none; color: var(--text); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+
+/* Page Hero */
+.page-hero { position: relative; height: 55vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; opacity: 0.5; background: url('https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/c1012a6d-a02d-4c0e-bef9-a165a94764eb/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1770927826_pk3e4c.jpeg') center/cover; }
+.page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, var(--bg) 100%); }
+.page-hero-content { position: relative; z-index: 2; padding: 0 2rem; }
+.page-hero-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 5px; color: var(--brand-gold); margin-bottom: 1.5rem; display: block; }
+.page-hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; line-height: 0.95; margin-bottom: 1rem; }
+.page-hero-title em { font-style: italic; color: var(--brand-gold); }
+.page-hero-desc { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+
+/* Menu Layout */
+.menu-layout { display: flex; max-width: 1400px; margin: 0 auto; padding: 4rem 3rem; gap: 4rem; }
+.menu-sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 100px; align-self: flex-start; }
+.menu-sidebar-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 2rem; color: var(--text); }
+.menu-cats { list-style: none; display: flex; flex-direction: column; gap: 0.15rem; }
+.menu-cats li a { display: block; padding: 0.5rem 0; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 400; transition: all 0.3s; border-left: 2px solid transparent; padding-left: 0; }
+.menu-cats li a:hover, .menu-cats li a.active { color: var(--brand-gold); border-left-color: var(--brand-gold); padding-left: 1rem; }
+
+.menu-content { flex: 1; min-width: 0; }
+.menu-cat { margin-bottom: 4rem; scroll-margin-top: 120px; }
+.menu-cat-title { font-family: var(--font-serif); font-size: 2rem; font-weight: 400; margin-bottom: 2rem; color: var(--text); display: flex; align-items: center; gap: 1.5rem; }
+.menu-cat-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.06); }
+.menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
+.menu-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 1.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); transition: all 0.3s; }
+.menu-item:hover { border-bottom-color: rgba(227,30,36,0.2); padding-left: 0.5rem; }
+.menu-item-name { font-weight: 500; font-size: 0.95rem; color: var(--text); }
+.menu-item-desc { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.2rem; line-height: 1.4; }
+.menu-item-price { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--brand-gold); white-space: nowrap; margin-left: 1.5rem; }
+
+/* Mobile cats */
+.mobile-cats { display: none; position: sticky; top: 72px; z-index: 100; background: var(--bg); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 0.75rem 1.5rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mobile-cats::-webkit-scrollbar { display: none; }
+.mobile-cats-inner { display: flex; gap: 0.5rem; }
+.mobile-cats a { flex-shrink: 0; padding: 0.4rem 1rem; font-size: 0.75rem; font-weight: 500; color: var(--text-muted); text-decoration: none; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; white-space: nowrap; text-transform: uppercase; letter-spacing: 1px; }
+.mobile-cats a:hover, .mobile-cats a.active { background: var(--brand-red); color: #fff; border-color: var(--brand-red); }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s var(--ease-expo); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* Footer */
+.footer { padding: 5rem 3rem 2.5rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 4rem; }
+.footer-brand { max-width: 300px; }
+.footer-brand img { height: 40px; margin-bottom: 1.5rem; }
+.footer-brand p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+.footer-social { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.footer-social a { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-muted); transition: all 0.4s; }
+.footer-social a:hover { border-color: var(--brand-red); color: var(--brand-red); transform: translateY(-3px); }
+.footer-col h4 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; margin-bottom: 1.5rem; }
+.footer-col a { display: block; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; padding: 0.4rem 0; transition: color 0.3s; }
+.footer-col a:hover { color: var(--brand-red); padding-left: 0.5rem; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-dim); font-size: 0.8rem; }
+
+@media (max-width: 1024px) {
+  .menu-layout { flex-direction: column; }
+  .menu-sidebar { display: none; }
+  .mobile-cats { display: block; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-mobile-btn { display: block; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .page-hero { height: 45vh; min-height: 320px; }
+  .section { padding: 4rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .menu-layout { padding: 2rem 1rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="noise"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand" aria-label="India Avenue home">
+    <img src="india-avenue-logo.png" alt="India Avenue" width="220" height="56" decoding="async" style="height:52px;width:auto;display:block">
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="lunch-specials.html">Lunch Specials</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#visit">Visit</a>
+    <a href="index.html#gallery">Gallery</a>
+  </div>
+  <a href="https://order.toasttab.com/online/india-avenue-249-railroad-avenue" target="_blank" class="nav-cta">Order Now</a>
+  <button class="nav-mobile-btn" id="mobileBtn"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileClose"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="index.html">Home</a>
+  <a href="menu.html" class="active">Menu</a>
+  <a href="lunch-specials.html">Lunch Specials</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#visit">Visit</a>
+  <a href="index.html#gallery">Gallery</a>
+  <a href="https://order.toasttab.com/online/india-avenue-249-railroad-avenue" target="_blank" style="color:var(--brand-red)">Order Now</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <span class="page-hero-label">Curated With Care</span>
+    <h1 class="page-hero-title">Our <em>Menu</em></h1>
+    <p class="page-hero-desc">Authentic Indian cuisine crafted with fragrant spices, traditional techniques, and modern sensibility.</p>
+  </div>
+</section>
+
+<div class="mobile-cats">
+  <div class="mobile-cats-inner">
+    <a href="#featured">Featured</a>
+    <a href="#soup">Soup</a>
+    <a href="#chaat">Chaat</a>
+    <a href="#salad">Salad</a>
+    <a href="#appetizer">Appetizer</a>
+    <a href="#dosa">Dosa</a>
+    <a href="#indochinese">Indo-Chinese</a>
+    <a href="#veg">Veg</a>
+    <a href="#nonveg">Non-Veg</a>
+    <a href="#tandoor">Tandoor</a>
+    <a href="#rice">Rice</a>
+    <a href="#biryani">Biryani</a>
+    <a href="#breads">Breads</a>
+    <a href="#sides">Sides</a>
+    <a href="#kids">Kid's</a>
+    <a href="#beverages">Drinks</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#beer">Beer</a>
+    <a href="#liquor">Liquor</a>
+    <a href="#wine">Wine</a>
+    <a href="#cocktails">Cocktails</a>
+  </div>
+</div>
+
+<div class="menu-layout">
+  <aside class="menu-sidebar">
+    <div class="menu-sidebar-title">Categories</div>
+    <ul class="menu-cats">
+      <li><a href="#featured" class="active">Featured Items</a></li>
+      <li><a href="#soup">Soup</a></li>
+      <li><a href="#chaat">Chaat Corner</a></li>
+      <li><a href="#salad">Salad</a></li>
+      <li><a href="#appetizer">Appetizer</a></li>
+      <li><a href="#dosa">Dosa Stand</a></li>
+      <li><a href="#indochinese">Indo-Chinese</a></li>
+      <li><a href="#veg">Vegetarian Entrees</a></li>
+      <li><a href="#nonveg">Non-Vegetarian Entrees</a></li>
+      <li><a href="#tandoor">Tandoor (Clay Oven)</a></li>
+      <li><a href="#rice">Rice</a></li>
+      <li><a href="#biryani">Biryani</a></li>
+      <li><a href="#breads">Breads</a></li>
+      <li><a href="#sides">Sides</a></li>
+      <li><a href="#kids">Kid's Menu</a></li>
+      <li><a href="#beverages">Beverages</a></li>
+      <li><a href="#desserts">Desserts</a></li>
+      <li><a href="#beer">Beer</a></li>
+      <li><a href="#liquor">Liquor</a></li>
+      <li><a href="#sparkling">Sparkling</a></li>
+      <li><a href="#rose">Rose</a></li>
+      <li><a href="#whitewine">White Wine</a></li>
+      <li><a href="#redwine">Red Wine</a></li>
+      <li><a href="#cocktails">Cocktails</a></li>
+    </ul>
+  </aside>
+
+  <div class="menu-content">
+
+    <div class="menu-cat" id="featured">
+      <h2 class="menu-cat-title">Featured Items</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Garlic Naan</div></div><div class="menu-item-price">$5.25</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Tikka Masala</div><div class="menu-item-desc">Tandoori boneless chicken in a creamy tomato and fenugreek sauce</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Naan</div></div><div class="menu-item-price">$4.50</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="soup">
+      <h2 class="menu-cat-title">Soup</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Mulligatawny Soup GF/V</div><div class="menu-item-desc">Mildly spiced rich lentil soup</div></div><div class="menu-item-price">$6.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Sweet Corn Soup GF/V</div><div class="menu-item-desc">Indo Chinese style sweet corn with scallion</div></div><div class="menu-item-price">$6.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Rasam Soup GF/V</div><div class="menu-item-desc">Home style spicy tamarind tomato soup</div></div><div class="menu-item-price">$6.50</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="chaat">
+      <h2 class="menu-cat-title">Chaat Corner</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Bhel Puri</div><div class="menu-item-desc">Puffed rice, potatoes, onions, crispy noodles, mint & tamarind chutneys</div></div><div class="menu-item-price">$8.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Dahi Aloo Puri</div><div class="menu-item-desc">Mini puri, mashed potatoes, yogurt, mint & tamarind chutneys</div></div><div class="menu-item-price">$8.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Ragada Patties</div><div class="menu-item-desc">Potato patties, peas, onion, tomatoes; yogurt, mint and tamarind chutneys</div></div><div class="menu-item-price">$9.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Samosa</div><div class="menu-item-desc">Crispy turnovers, seasoned potatoes & green peas</div></div><div class="menu-item-price">$7.25</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Samosa Chaat</div></div><div class="menu-item-price">$10.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Samosa 1pcs</div></div><div class="menu-item-price">$3.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="salad">
+      <h2 class="menu-cat-title">Salad</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Sprout Salad</div><div class="menu-item-desc">Mung bean sprout, onion, tomatoes & lime juice</div></div><div class="menu-item-price">$9.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Avocado Salad</div><div class="menu-item-desc">Romaine lettuce, avocado, onion & cherry tomatoes</div></div><div class="menu-item-price">$10.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="appetizer">
+      <h2 class="menu-cat-title">Appetizer</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Onion Bhaji</div><div class="menu-item-desc">Batter fried onion fritters</div></div><div class="menu-item-price">$9.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Hara Bhara Kabab</div><div class="menu-item-desc">Spinach, chickpeas patties stuffed with spiced paneer</div></div><div class="menu-item-price">$10.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Tofu Tandoori</div><div class="menu-item-desc">Tofu marinated with herbs & spices cooked in clay oven</div></div><div class="menu-item-price">$11.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kalmi Kabab</div><div class="menu-item-desc">Spiced chicken wings from clay oven</div></div><div class="menu-item-price">$12.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Coriander Chicken</div><div class="menu-item-desc">Marinated with coriander, herbs & spices cooked in clay oven</div></div><div class="menu-item-price">$13.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Jhinga Dum Nasha</div><div class="menu-item-desc">Shrimp marinated in hung yogurt cooked in clay oven</div></div><div class="menu-item-price">$14.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="dosa">
+      <h2 class="menu-cat-title">Dosa Stand</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Masala Dosa</div><div class="menu-item-desc">Rice and lentil crepe stuffed with spiced potatoes served with sambar</div></div><div class="menu-item-price">$12.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Keema Dosa</div><div class="menu-item-desc">Lamb stuffed rice and lentil crepe served with sambar</div></div><div class="menu-item-price">$15.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Plain Dosa</div></div><div class="menu-item-price">$10.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="indochinese">
+      <h2 class="menu-cat-title">Indo-Chinese</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Gobi Manchurian V</div><div class="menu-item-desc">Cauliflower batter fried florets sauteed with onion, bell pepper, ginger and garlic</div></div><div class="menu-item-price">$13.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chili Paneer</div><div class="menu-item-desc">Cottage cheese cube stir-fried with onion, bell pepper and garlic infused chili</div></div><div class="menu-item-price">$13.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Chili</div><div class="menu-item-desc">Boneless chicken stir-fried with onion, bell pepper and garlic infused chili sauce</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Manchurian</div><div class="menu-item-desc">Boneless chicken cooked in ginger & garlic infused sauce</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Hakka Noodle</div><div class="menu-item-desc">Egg noodles, carrot, cabbage and bell peppers</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Garlic Shrimp</div><div class="menu-item-desc">Shrimp in a garlic infused sauce</div></div><div class="menu-item-price">$18.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Fried Rice</div></div><div class="menu-item-price">$14.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="veg">
+      <h2 class="menu-cat-title">Vegetarian Entrees</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Tadka Dal GF</div><div class="menu-item-desc">Yellow lentil & tomatoes tempered with cumin seeds</div></div><div class="menu-item-price">$15.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Dal Tandoor Pasha GF</div><div class="menu-item-desc">Black lentils with herbs and spices cooked in clay oven</div></div><div class="menu-item-price">$15.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Avial GF</div><div class="menu-item-desc">Mixed vegetables, coconut, hung yogurt & curry leaves</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Saag Paneer GF</div><div class="menu-item-desc">Paneer, spinach with freshly ground spices</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Malai Kofta GF</div><div class="menu-item-desc">Mixed vegetables dumplings made with potatoes and stuffed with dry fruit spices</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mirch Baigan Salan GF/V</div><div class="menu-item-desc">Baby eggplant, stuffed pepper in tamarind, peanut and sesame seed</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Shahi Paneer GF</div><div class="menu-item-desc">Homemade cottage cheese in rich cashew nut and almond sauce</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Baingan Bharta GF/V</div><div class="menu-item-desc">Smoked eggplant puree sauteed with fresh tomatoes, green peas, onions</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kadai Paneer GF</div><div class="menu-item-desc">Homemade cottage cheese, onion, bell pepper, and spice</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Aamchur Bhindi GF/V</div><div class="menu-item-desc">Fresh okra cooked with dry mango and spices</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Navaratna Korma GF</div><div class="menu-item-desc">Assorted vegetables cooked in creamy almond sauce</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kadai Veg GF/V</div><div class="menu-item-desc">Mixed vegetables with spices</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mutter Gobi</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mutter Paneer</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chana Saag</div></div><div class="menu-item-price">$16.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Paneer Tikka Masala</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Tofu Saag</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Vegetable Tikka Masala</div></div><div class="menu-item-price">$19.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="nonveg">
+      <h2 class="menu-cat-title">Non Vegetarian Entrees</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Tikka Masala</div><div class="menu-item-desc">Tandoori boneless chicken in a creamy tomato and fenugreek sauce</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Chettinad</div><div class="menu-item-desc">Classic south indian hot 'n' spicy chicken curry</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Madras</div><div class="menu-item-desc">Boneless chicken, curry leaves, red chili, fresh coconut and mustard seed</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Vindaloo</div><div class="menu-item-desc">Hot and tangy goan style spicy chicken curry</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kadai Chicken</div><div class="menu-item-desc">Boneless chicken, onion, bell pepper & cherry tomato</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Korma</div><div class="menu-item-desc">Boneless chicken in rich cashew nut and almond sauce</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Butter Chicken</div><div class="menu-item-desc">Chicken cooked in tandoor and finished with aromatic Indian spices & creamy</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Saag</div><div class="menu-item-desc">Boneless chicken, spinach, ginger and spices</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Curry</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Vindaloo</div><div class="menu-item-desc">Hot and tangy goan style spicy lamb curry</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Pepper Fry</div><div class="menu-item-desc">Lamb cooked with coconut roasted peppers Kerala style</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Saag</div><div class="menu-item-desc">Lamb, spinach, ginger and spices</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Madras</div><div class="menu-item-desc">Lamb, curry leaves, red chili, fresh coconut and mustard seed</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Pasanda</div><div class="menu-item-desc">Lamb cooked in creamy almond sauce</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Rogan Josh</div><div class="menu-item-desc">Kashmiri style lamb cooked in shallots, yogurt & aromatic spices</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Tikka Masala</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Korma</div></div><div class="menu-item-price">$23.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Shrimp Madras</div><div class="menu-item-desc">Shrimp, curry leaves, red chili, fresh coconut & mustard seeds</div></div><div class="menu-item-price">$25.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Shrimp Vindaloo</div><div class="menu-item-desc">Hot and tangy goan style spicy shrimp curry</div></div><div class="menu-item-price">$25.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Allepey Fish Curry</div><div class="menu-item-desc">Chef signature mango curry with coconut milk</div></div><div class="menu-item-price">$27.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="tandoor">
+      <h2 class="menu-cat-title">Tandoor (From Clay Oven)</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Tandoori Salmon</div><div class="menu-item-desc">Salmon marinated with kashmiri chilies, cinnamon and black pepper</div></div><div class="menu-item-price">$24.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mixed Grill</div><div class="menu-item-desc">Salmon, chicken tikka, chicken tandoori, seekh kabab, malai kabab and shrimp</div></div><div class="menu-item-price">$32.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Tandoori</div><div class="menu-item-desc">Chicken marinated with hung yogurt, Kashmiri chilies and spices</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Tikka</div><div class="menu-item-desc">Boneless chicken marinated with hung yogurt</div></div><div class="menu-item-price">$21.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Paneer Tikka</div><div class="menu-item-desc">Cubed paneer with bell peppers and onions grilled to perfection</div></div><div class="menu-item-price">$17.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Malai Kabab</div><div class="menu-item-desc">Chicken tenders grilled to perfection</div></div><div class="menu-item-price">$22.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Basil Chicken Tikka</div><div class="menu-item-desc">Basil infused boneless chicken</div></div><div class="menu-item-price">$22.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Seekh Kabab</div><div class="menu-item-desc">Minced lamb or chicken kabab cooked in tandoor</div></div><div class="menu-item-price">$20.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Tandoori Shrimp</div><div class="menu-item-desc">Shrimp marinated with kashmiri chilies, hung yogurt, lemon grilled in clay oven</div></div><div class="menu-item-price">$25.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lamb Chops</div><div class="menu-item-desc">Lamb chops marinated in tandoori masala and crushed peppers</div></div><div class="menu-item-price">$34.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="rice">
+      <h2 class="menu-cat-title">Rice</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Lemon Rice</div><div class="menu-item-desc">Lemon flavored rice tempered with mustard seeds, curry leaves, peanut</div></div><div class="menu-item-price">$10.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Coconut Rice</div><div class="menu-item-desc">Coconut flavored rice tempered with mustard seeds, curry leaves, peanut</div></div><div class="menu-item-price">$10.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Brown Rice</div></div><div class="menu-item-price">$3.75</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Basmati Rice</div></div><div class="menu-item-price">$3.75</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="biryani">
+      <h2 class="menu-cat-title">Biryani</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Biryani</div><div class="menu-item-desc">Cooked with basmati rice and aromatic spices</div></div><div class="menu-item-price">$16.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="breads">
+      <h2 class="menu-cat-title">Breads</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Naan</div></div><div class="menu-item-price">$4.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Garlic Naan</div></div><div class="menu-item-price">$5.25</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Onion Naan</div></div><div class="menu-item-price">$5.25</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chili Naan</div></div><div class="menu-item-price">$5.25</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Peshawari Naan</div></div><div class="menu-item-price">$6.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Roti</div></div><div class="menu-item-price">$4.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lachcha Paratha</div></div><div class="menu-item-price">$6.25</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mint Paratha</div></div><div class="menu-item-price">$6.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Aloo Paratha</div></div><div class="menu-item-price">$6.50</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="sides">
+      <h2 class="menu-cat-title">Sides</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Cucumber Raita</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mango Chutney</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mixed Pickle</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Papad (2 Pieces)</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">8 Oz Mint</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">8 Oz Tamarind Chutney</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">8 Oz Chic Tikka Masala Sauce</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Onion & Chilies</div></div><div class="menu-item-price">$3.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="kids">
+      <h2 class="menu-cat-title">Kid's Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">K- Chicken Nuggets</div></div><div class="menu-item-price">$7.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">K- French Fries</div></div><div class="menu-item-price">$5.95</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="beverages">
+      <h2 class="menu-cat-title">Beverages</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Mango Lassi</div></div><div class="menu-item-price">$5.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Sweet Lassi</div></div><div class="menu-item-price">$5.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Salted Lassi</div></div><div class="menu-item-price">$5.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Coke</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Diet Coke</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Sprite</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Ginger Ale</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mango Juice</div></div><div class="menu-item-price">$4.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lychee Juice</div></div><div class="menu-item-price">$4.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Orange Juice</div></div><div class="menu-item-price">$4.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Perrier</div></div><div class="menu-item-price">$4.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Poland Spring Water</div></div><div class="menu-item-price">$2.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">San Pellegrino</div></div><div class="menu-item-price">$6.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Aqua Panna</div></div><div class="menu-item-price">$6.50</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Club Soda</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Shirley Temple</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Cranberry</div></div><div class="menu-item-price">$4.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Pineapple</div></div><div class="menu-item-price">$4.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Masala Chai</div></div><div class="menu-item-price">$3.75</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chai</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Madras Coffee</div></div><div class="menu-item-price">$3.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Iced Tea</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lemonade</div></div><div class="menu-item-price">$4.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Black Coffee</div></div><div class="menu-item-price">$3.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Apple Juice</div></div><div class="menu-item-price">$4.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="desserts">
+      <h2 class="menu-cat-title">Desserts</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Rasmalai</div></div><div class="menu-item-price">$5.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Gulab Jamun</div></div><div class="menu-item-price">$5.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Gajar Halwa</div></div><div class="menu-item-price">$5.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kheer</div></div><div class="menu-item-price">$5.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Ice Cream</div></div><div class="menu-item-price">$5.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kulfi</div></div><div class="menu-item-price">$6.50</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="beer">
+      <h2 class="menu-cat-title">Beer</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Stella Artois</div></div><div class="menu-item-price">$7.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Stella Artois (Non-Alcohol)</div></div><div class="menu-item-price">$7.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Rupee IPA</div></div><div class="menu-item-price">$8.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Rupee Lager</div></div><div class="menu-item-price">$8.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kingfisher</div></div><div class="menu-item-price">$7.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">22 Oz Taj Mahal</div></div><div class="menu-item-price">$11.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="liquor">
+      <h2 class="menu-cat-title">Liquor</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Jack Daniel's</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Jameson</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Dewar's White Label</div></div><div class="menu-item-price">$15.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chivas Regal 12</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Glenlivet 12</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Glenfiddich 12</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Macallan 12</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Macallan 18</div></div><div class="menu-item-price">$35.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Johnnie Walker Red</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Johnnie Walker Black</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Johnnie Walker Blue</div></div><div class="menu-item-price">$20.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Maker's Mark</div></div><div class="menu-item-price">$15.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Fireball</div></div><div class="menu-item-price">$12.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Wild Turkey</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Woodford Reserve</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Michter's</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Oban</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Toki (Suntory Whiskey)</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bulleit</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Jim Beam</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Tito's</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grey Goose</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Belvedere</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Ketel One</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Haku</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Tanqueray</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bombay Sapphire</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Hendrick's</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Roku Gin</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bacardi</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Captain Morgan</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Pirate Rum</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Espolon Blanco</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Casamigos Blanco</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Don Julio</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Patron Silver</div></div><div class="menu-item-price">$16.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Hennessy</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Remy Martin</div></div><div class="menu-item-price">$19.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Courvoisier</div></div><div class="menu-item-price">$18.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grand Marnier</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Kahlua</div></div><div class="menu-item-price">$12.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Cointreau</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bailey's</div></div><div class="menu-item-price">$12.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="sparkling">
+      <h2 class="menu-cat-title">Sparkling</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Lamarca (B)</div></div><div class="menu-item-price">$12.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="rose">
+      <h2 class="menu-cat-title">Rose</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Glass Fleurs De Prairie Rose</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bottle Fleurs De Prairie Rose</div></div><div class="menu-item-price">$52.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="whitewine">
+      <h2 class="menu-cat-title">White Wine</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Glass Conti Beretta Pinot Grigio</div></div><div class="menu-item-price">$12.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bottle Conti Beretta Pinot Grigio</div></div><div class="menu-item-price">$44.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Glass Matua Sauvignon Blanc</div></div><div class="menu-item-price">$12.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bottle Matua Sauvignon Blanc</div></div><div class="menu-item-price">$44.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Dashwood Sauvignon Blanc - Bottle</div></div><div class="menu-item-price">$49.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Raeburn Chardonnay - Bottle</div></div><div class="menu-item-price">$52.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Glass Chalk Hill Chardonnay</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bottle Chalk Hill Chardonnay</div></div><div class="menu-item-price">$52.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="redwine">
+      <h2 class="menu-cat-title">Red Wine</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Glass Erath Pinot Noir</div></div><div class="menu-item-price">$13.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bottle Erath Pinot Noir</div></div><div class="menu-item-price">$48.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Glass Louis Martini Cabernet Sauvignon</div></div><div class="menu-item-price">$14.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bottle Louis Martini Cabernet Sauvignon</div></div><div class="menu-item-price">$52.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Glass Gougenheim Malbec</div></div><div class="menu-item-price">$12.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bottle Gougenheim Malbec</div></div><div class="menu-item-price">$44.00</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Slow Press Cabernet Sauvignon - Bottle</div></div><div class="menu-item-price">$41.00</div></div>
+      </div>
+    </div>
+
+    <div class="menu-cat" id="cocktails">
+      <h2 class="menu-cat-title">Cocktails</h2>
+      <div class="menu-grid">
+        <div class="menu-item"><div><div class="menu-item-name">Cooch Behar</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">The Bengal Tiger</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Love Martini</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Lychee Martini</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bombay Dream</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Cosmopolitan</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Margarita</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mojito</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Martini</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Manhattan</div></div><div class="menu-item-price">$14.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Gin & Tonic</div></div><div class="menu-item-price">$13.95</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Crockage</div></div><div class="menu-item-price">$25.00</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="india-avenue-logo.png" alt="India Avenue" width="200" height="52" decoding="async" style="height:44px;width:auto;display:block">
+      <p>A culinary adventure to the farthest corners of India. Fine dining in the heart of Greenwich, Connecticut.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/indiaavenuegreenwich/" target="_blank" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Full Menu</a>
+      <a href="lunch-specials.html">Lunch Specials</a>
+      <a href="index.html#gallery">Gallery</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+12037171567">+1 (203) 717-1567</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=India%20Avenue%2C%20249%20Railroad%20Ave%20Greenwich%20CT%2006830" target="_blank">249 Railroad Ave, Greenwich</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <a>Mon-Fri: 11:30AM - 10:00PM</a>
+      <a>Sat-Sun: 12:00PM - 10:00PM</a>
+      <a href="https://order.toasttab.com/online/india-avenue-249-railroad-avenue" target="_blank" style="color:var(--brand-red); margin-top:0.5rem;">Order Online &rarr;</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="y"></span> India Avenue. All rights reserved.</p>
+    <p>Crafted with passion in Greenwich, CT</p>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
+
+const mobileBtn = document.getElementById('mobileBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileClose = document.getElementById('mobileClose');
+function closeMobileNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+function openMobileNav() { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; }
+mobileBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav(); });
+mobileClose.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); closeMobileNav(); });
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+mobileNav.addEventListener('click', (e) => { if (e.target === mobileNav) closeMobileNav(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav(); });
+
+const sections = document.querySelectorAll('.menu-cat');
+const sidebarLinks = document.querySelectorAll('.menu-cats a');
+const mobileLinks = document.querySelectorAll('.mobile-cats a');
+function updateActive() {
+  let current = '';
+  sections.forEach(s => { if (s.getBoundingClientRect().top <= 150) current = s.id; });
+  sidebarLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  mobileLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+}
+window.addEventListener('scroll', updateActive);
+
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.menu-cat').forEach(el => {
+  el.classList.add('reveal');
+  revealObs.observe(el);
+});
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
