@@ -43,11 +43,15 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --site-safe-top: env(safe-area-inset-top, 0px);
+  --site-safe-left: env(safe-area-inset-left, 0px);
+  --site-safe-right: env(safe-area-inset-right, 0px);
+  --site-header-offset: calc(var(--site-safe-top) + clamp(5rem, 11vmin + 3.25rem, 7.5rem));
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-#about,#visit,#gallery{scroll-margin-top:96px}
+#about,#visit,#gallery{scroll-margin-top:var(--site-header-offset)}
 
 body {
   font-family: var(--font-sans);
@@ -80,13 +84,17 @@ body {
 /* === NAVIGATION === */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center;
+  padding-top: calc(1.25rem + var(--site-safe-top)); padding-bottom: 1.25rem;
+  padding-left: max(3rem, var(--site-safe-left)); padding-right: max(3rem, var(--site-safe-right));
+  display: flex; justify-content: space-between; align-items: center;
   transition: all 0.5s var(--ease-expo);
 }
 .nav.scrolled {
   background: rgba(10,10,10,0.85); backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
-  padding: 1rem 3rem; border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding-top: calc(0.85rem + var(--site-safe-top)); padding-bottom: 0.85rem;
+  padding-left: max(3rem, var(--site-safe-left)); padding-right: max(3rem, var(--site-safe-right));
+  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 .nav-brand {
   display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text);
@@ -130,7 +138,7 @@ body {
 }
 .mobile-nav a:hover, .mobile-nav a.active { color: var(--brand-red); }
 .mobile-nav-close {
-  position: absolute; top: 1.25rem; right: 1.25rem; z-index: 10;
+  position: absolute; top: max(1rem, var(--site-safe-top) + 0.35rem); right: max(1rem, var(--site-safe-right) + 0.35rem); z-index: 10;
   min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;
   background: none; border: none; color: var(--text); cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -153,7 +161,7 @@ body {
   position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(ellipse at center, transparent 40%, rgba(10,10,10,0.5) 100%);
 }
-.hero-content { position: relative; z-index: 2; max-width: 900px; }
+.hero-content { position: relative; z-index: 2; max-width: 900px; padding-right: max(0.7rem, 2vw); box-sizing: border-box; }
 .hero-label {
   display: inline-block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
   letter-spacing: 5px; color: var(--brand-red); margin-bottom: 2rem; opacity: 0;
@@ -162,10 +170,14 @@ body {
 .hero-label.show { opacity: 1; transform: translateY(0); transition: all 1s var(--ease-expo); }
 .hero-title {
   font-family: var(--font-serif); font-size: clamp(3.5rem, 10vw, 8rem); font-weight: 300;
-  line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.5rem;
+  line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 1.5rem;
 }
 .hero-title .line {
-  display: block; overflow: hidden;
+  display: block;
+  overflow: hidden;
+  /* Room for Yellowtail swashes so “India” isn’t clipped by the reveal mask */
+  padding-bottom: 0.14em;
+  padding-right: max(0.22em, 10px);
 }
 .hero-title .line span {
   display: block; transform: translateY(110%);
@@ -178,6 +190,8 @@ body {
   font-style: normal;
   font-weight: 400;
   color: var(--brand-gold);
+  letter-spacing: 0;
+  padding-right: 0.06em;
 }
 .hero-desc {
   font-size: 1.1rem; color: var(--text-muted); max-width: 520px; line-height: 1.7;
@@ -331,15 +345,29 @@ body {
 /* === HOURS & LOCATION === */
 .hl-section { background: var(--bg-elevated); }
 .hl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-.hours-list { display: flex; flex-direction: column; gap: 0; }
-.hour-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
-  transition: all 0.3s; cursor: default;
+.hours-list {
+  display: flex; flex-direction: column; gap: 0;
+  border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 0 1.25rem;
+  background: rgba(255,255,255,0.02);
 }
-.hour-row:hover { padding-left: 1rem; background: rgba(255,255,255,0.02); }
-.hour-day { font-weight: 500; font-size: 0.95rem; }
-.hour-time { color: var(--text-muted); font-size: 0.9rem; }
+.hour-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 1rem 1.5rem;
+  padding: 1.05rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.3s, padding-left 0.3s; cursor: default;
+}
+.hour-row:last-child { border-bottom: none; }
+.hour-row:hover { padding-left: 0.35rem; background: rgba(255,255,255,0.03); }
+.hour-day {
+  flex: 0 0 auto; min-width: 6.75rem;
+  font-weight: 600; font-size: 0.9rem; letter-spacing: 0.02em; line-height: 1.4;
+}
+.hour-time {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem;
+  color: var(--text-muted); font-size: 0.875rem; line-height: 1.45; text-align: right;
+}
+.hour-slot { display: block; }
 .hour-row:hover .hour-day { color: var(--brand-red); transition: color 0.3s; }
 
 .map-wrap {
@@ -363,18 +391,27 @@ body {
 
 /* === GALLERY === */
 .gallery-section { padding: 6rem 0; }
+/* Multi-column masonry: natural image heights, uniform gutter */
 .gallery-masonry {
-  display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 280px; gap: 0.5rem;
+  column-count: 4;
+  column-gap: 0.5rem;
+  column-fill: auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 .gallery-item {
   position: relative; overflow: hidden; cursor: pointer; border-radius: 8px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin-bottom: 0.5rem;
+  /* WebKit: full column width + avoid phantom gaps between items */
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
 }
-.gallery-item:nth-child(1) { grid-row: span 2; }
-.gallery-item:nth-child(4) { grid-row: span 2; }
-.gallery-item:nth-child(6) { grid-row: span 2; }
-.gallery-item:nth-child(9) { grid-row: span 2; }
 .gallery-item img {
-  width: 100%; height: 100%; object-fit: cover;
+  width: 100%; height: auto; display: block;
   transition: transform 0.8s var(--ease-expo), filter 0.5s;
   filter: brightness(0.8);
 }
@@ -459,24 +496,32 @@ body {
 @media (max-width: 768px) { .about-stats { grid-template-columns: 1fr 1fr; } }
 
 /* === RESPONSIVE === */
+@media (max-width: 1280px) {
+  .gallery-masonry { column-count: 3; }
+}
 @media (max-width: 1024px) {
   .about-section { grid-template-columns: 1fr; }
   .about-image { min-height: 400px; }
-  .hl-grid { grid-template-columns: 1fr; }
-  .gallery-masonry { grid-template-columns: repeat(2, 1fr); }
-  .gallery-item:nth-child(1), .gallery-item:nth-child(4), .gallery-item:nth-child(6), .gallery-item:nth-child(9) { grid-row: span 1; }
+  .hl-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .gallery-masonry { column-count: 2; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
   .nav-links, .nav-cta { display: none; }
   .nav-mobile-btn { display: block; }
   .nav, .nav.scrolled {
-    padding-left: max(1.25rem, env(safe-area-inset-left));
-    padding-right: max(1.25rem, env(safe-area-inset-right));
+    padding-left: max(1.25rem, var(--site-safe-left)); padding-right: max(1.25rem, var(--site-safe-right));
   }
-  .hero { padding: 0 max(1.25rem, env(safe-area-inset-left)) 5rem max(1.25rem, env(safe-area-inset-right)); align-items: center; justify-content: center; text-align: center; }
+  .hero {
+    padding-top: var(--site-header-offset);
+    padding-bottom: 5rem;
+    padding-left: max(1.25rem, var(--site-safe-left)); padding-right: max(1.25rem, var(--site-safe-right));
+    align-items: center; justify-content: center; text-align: center;
+    box-sizing: border-box;
+  }
   .hero-actions { flex-direction: column; }
-  .hero-title { font-size: 3.5rem; }
+  .hero-title { font-size: 3.5rem; line-height: 1.1; }
+  .hero-title .line { padding-right: max(0.28em, 14px); padding-bottom: 0.18em; }
   .section { padding: 5rem max(1.25rem, env(safe-area-inset-left)) 5rem max(1.25rem, env(safe-area-inset-right)); }
   .about-content {
     padding: 2.5rem max(1.25rem, env(safe-area-inset-left)) 3rem max(1.25rem, env(safe-area-inset-right));
@@ -486,12 +531,34 @@ body {
   .featured-card { flex: 0 0 280px; }
   .gallery-section { padding: 4rem max(1.25rem, env(safe-area-inset-left)) 3rem max(1.25rem, env(safe-area-inset-right)); }
   .gallery-section .section-header { padding-left: 0 !important; padding-right: 0 !important; }
-  .gallery-masonry { grid-template-columns: 1fr; grid-auto-rows: 250px; }
   .footer { padding: 4rem max(1.25rem, env(safe-area-inset-left)) 2.5rem max(1.25rem, env(safe-area-inset-right)); }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
   .floating-cta { display: none; }
   .custom-cursor { display: none; }
+  .hours-list { padding: 0 1rem; border-radius: 10px; }
+  .hour-row {
+    flex-direction: column; align-items: stretch;
+    gap: 0.45rem; padding: 1rem 0;
+  }
+  .hour-row:hover { padding-left: 0; }
+  .hour-day {
+    min-width: 0; font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .hour-time {
+    align-items: flex-start; text-align: left; font-size: 0.92rem;
+    border-left: 2px solid rgba(253,184,19,0.4); padding-left: 0.85rem; margin-left: 0;
+  }
+  .hour-row:hover .hour-day { color: var(--brand-gold); }
+}
+/* Phones & small tablets: single column = no multi-column gaps / misalignment */
+@media (max-width: 900px) {
+  .gallery-masonry {
+    column-count: 1;
+    column-fill: auto;
+  }
+  .gallery-item { margin-bottom: 0.5rem; }
 }
 </style>
 </head>
@@ -652,13 +719,13 @@ body {
   <div class="hl-grid">
     <div class="reveal">
       <div class="hours-list">
-        <div class="hour-row"><span class="hour-day">Monday</span><span class="hour-time">11:30 AM &ndash; 2:30 PM, 5:00 PM &ndash; 10:00 PM</span></div>
-        <div class="hour-row"><span class="hour-day">Tuesday</span><span class="hour-time">11:30 AM &ndash; 2:30 PM, 5:00 PM &ndash; 10:00 PM</span></div>
-        <div class="hour-row"><span class="hour-day">Wednesday</span><span class="hour-time">11:30 AM &ndash; 2:30 PM, 5:00 PM &ndash; 10:00 PM</span></div>
-        <div class="hour-row"><span class="hour-day">Thursday</span><span class="hour-time">11:30 AM &ndash; 2:30 PM, 5:00 PM &ndash; 10:00 PM</span></div>
-        <div class="hour-row"><span class="hour-day">Friday</span><span class="hour-time">11:30 AM &ndash; 2:30 PM, 5:00 PM &ndash; 10:00 PM</span></div>
-        <div class="hour-row"><span class="hour-day">Saturday</span><span class="hour-time">12:00 PM &ndash; 3:00 PM, 5:00 PM &ndash; 10:00 PM</span></div>
-        <div class="hour-row"><span class="hour-day">Sunday</span><span class="hour-time">12:00 PM &ndash; 3:00 PM, 5:00 PM &ndash; 10:00 PM</span></div>
+        <div class="hour-row"><span class="hour-day">Monday</span><span class="hour-time"><span class="hour-slot">11:30 AM &ndash; 2:30 PM</span><span class="hour-slot">5:00 PM &ndash; 10:00 PM</span></span></div>
+        <div class="hour-row"><span class="hour-day">Tuesday</span><span class="hour-time"><span class="hour-slot">11:30 AM &ndash; 2:30 PM</span><span class="hour-slot">5:00 PM &ndash; 10:00 PM</span></span></div>
+        <div class="hour-row"><span class="hour-day">Wednesday</span><span class="hour-time"><span class="hour-slot">11:30 AM &ndash; 2:30 PM</span><span class="hour-slot">5:00 PM &ndash; 10:00 PM</span></span></div>
+        <div class="hour-row"><span class="hour-day">Thursday</span><span class="hour-time"><span class="hour-slot">11:30 AM &ndash; 2:30 PM</span><span class="hour-slot">5:00 PM &ndash; 10:00 PM</span></span></div>
+        <div class="hour-row"><span class="hour-day">Friday</span><span class="hour-time"><span class="hour-slot">11:30 AM &ndash; 2:30 PM</span><span class="hour-slot">5:00 PM &ndash; 10:00 PM</span></span></div>
+        <div class="hour-row"><span class="hour-day">Saturday</span><span class="hour-time"><span class="hour-slot">12:00 PM &ndash; 3:00 PM</span><span class="hour-slot">5:00 PM &ndash; 10:00 PM</span></span></div>
+        <div class="hour-row"><span class="hour-day">Sunday</span><span class="hour-time"><span class="hour-slot">12:00 PM &ndash; 3:00 PM</span><span class="hour-slot">5:00 PM &ndash; 10:00 PM</span></span></div>
       </div>
     </div>
     <div class="reveal reveal-delay-2">
@@ -754,7 +821,15 @@ if (window.matchMedia('(pointer: fine)').matches) {
     requestAnimationFrame(animateCursor);
   }
   animateCursor();
+  const navEl = document.getElementById('nav');
+  const mobileNavEl = document.getElementById('mobileNav');
+  [navEl, mobileNavEl].forEach(bar => {
+    if (!bar) return;
+    bar.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+    bar.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+  });
   document.querySelectorAll('a, button, .gallery-item, .featured-card, .hour-row').forEach(el => {
+    if (el.closest('#nav') || el.closest('#mobileNav')) return;
     el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
   });

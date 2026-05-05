@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Lunch Specials | India Avenue</title>
 <meta name="description" content="Discover India Avenue's Lunch Specials - a curated selection of our finest Indian dishes at special lunch prices. Available weekdays and weekends.">
 <meta property="og:title" content="Lunch Specials | India Avenue" />
@@ -43,6 +43,11 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --site-safe-top: env(safe-area-inset-top, 0px);
+  --site-safe-left: env(safe-area-inset-left, 0px);
+  --site-safe-right: env(safe-area-inset-right, 0px);
+  /* Clears fixed nav + breathing room; scales with viewport + notches */
+  --site-header-offset: calc(var(--site-safe-top) + clamp(5rem, 11vmin + 3.25rem, 7.5rem));
 }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -54,9 +59,29 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
   background-repeat: repeat;
 }
 
+.custom-cursor {
+  position: fixed; width: 20px; height: 20px; border: 1.5px solid rgba(245,245,240,0.4);
+  border-radius: 50%; pointer-events: none; z-index: 10000;
+  transition: transform 0.15s var(--ease-smooth), width 0.3s, height 0.3s, border-color 0.3s;
+  transform: translate(-50%, -50%); mix-blend-mode: difference;
+}
+.custom-cursor.hovering {
+  width: 50px; height: 50px; border-color: var(--brand-red); background: rgba(227,30,36,0.1);
+}
+
 /* Nav */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; transition: all 0.5s var(--ease-expo); }
-.nav.scrolled { background: rgba(10,10,10,0.85); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); padding: 1rem 3rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding-top: calc(1.25rem + var(--site-safe-top)); padding-bottom: 1.25rem;
+  padding-left: max(3rem, var(--site-safe-left)); padding-right: max(3rem, var(--site-safe-right));
+  display: flex; justify-content: space-between; align-items: center; transition: all 0.5s var(--ease-expo);
+}
+.nav.scrolled {
+  background: rgba(10,10,10,0.85); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%);
+  padding-top: calc(0.85rem + var(--site-safe-top)); padding-bottom: 0.85rem;
+  padding-left: max(3rem, var(--site-safe-left)); padding-right: max(3rem, var(--site-safe-right));
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
 .nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text); }
 .nav-brand img { height: 38px; width: auto; }
 .nav-links { display: flex; gap: 2.5rem; align-items: center; }
@@ -73,14 +98,29 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 .mobile-nav.open { opacity: 1; pointer-events: all; }
 .mobile-nav a { font-family: var(--font-serif); font-size: 2rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
 .mobile-nav a:hover, .mobile-nav a.active { color: var(--brand-red); }
-.mobile-nav-close { position: absolute; top: 1.25rem; right: 1.25rem; z-index: 10; min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center; background: none; border: none; color: var(--text); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.mobile-nav-close {
+  position: absolute; top: max(1rem, var(--site-safe-top) + 0.35rem); right: max(1rem, var(--site-safe-right) + 0.35rem); z-index: 10;
+  min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;
+  background: none; border: none; color: var(--text); cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
 
 /* Page Hero */
-.page-hero { position: relative; height: 55vh; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+.page-hero {
+  position: relative; height: 55vh; min-height: 400px;
+  padding-top: var(--site-header-offset); padding-bottom: clamp(1.5rem, 5vmin, 3rem);
+  display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden;
+}
 .page-hero-bg { position: absolute; inset: 0; opacity: 0.5; background: url('https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/c1012a6d-a02d-4c0e-bef9-a165a94764eb/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1770927835_g2wiys.jpeg') center/cover; }
 .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, var(--bg) 100%); }
-.page-hero-content { position: relative; z-index: 2; padding: 0 2rem; }
-.page-hero-badge { display: inline-block; background: var(--brand-red); color: #fff; padding: 0.5rem 1.5rem; border-radius: 100px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1.5rem; }
+.page-hero-content {
+  position: relative; z-index: 2;
+  padding: clamp(0.35rem, 2vmin, 1rem) max(2rem, var(--site-safe-left)) 0 max(2rem, var(--site-safe-right));
+}
+.page-hero-badge {
+  display: inline-block; background: var(--brand-red); color: #fff; padding: 0.5rem 1.5rem; border-radius: 100px;
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 3px;
+  margin-bottom: clamp(1rem, 3vmin, 1.5rem); margin-top: clamp(0.25rem, 1.5vmin, 0.75rem);
+}
 .page-hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; line-height: 0.95; margin-bottom: 1rem; }
 .page-hero-title em { font-style: italic; color: var(--brand-gold); }
 .page-hero-desc { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
@@ -101,7 +141,7 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 .menu-item:hover { border-bottom-color: rgba(227,30,36,0.2); padding-left: 0.5rem; }
 .menu-item-name { font-weight: 500; font-size: 0.95rem; color: var(--text); }
 .menu-item-desc { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.2rem; line-height: 1.4; }
-.menu-item-price { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--brand-red); white-space: nowrap; margin-left: 1.5rem; }
+.menu-item-price { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--brand-gold); white-space: nowrap; margin-left: 1.5rem; }
 
 .price-note { text-align: center; margin-top: 4rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; color: var(--text-muted); font-size: 0.85rem; }
 
@@ -125,10 +165,14 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 @media (max-width: 768px) {
   .nav-links, .nav-cta { display: none; }
   .nav-mobile-btn { display: block; }
+  .nav, .nav.scrolled {
+    padding-left: max(1.25rem, var(--site-safe-left)); padding-right: max(1.25rem, var(--site-safe-right));
+  }
   .lunch-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .page-hero { height: 45vh; min-height: 320px; }
-  .lunch-content { padding: 3rem 1.5rem; }
+  .page-hero { height: auto; min-height: clamp(340px, 52vh, 520px); }
+  .lunch-content { padding: 3rem max(1.5rem, var(--site-safe-left)) 3rem max(1.5rem, var(--site-safe-right)); }
+  .custom-cursor { display: none; }
 }
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
@@ -139,6 +183,7 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 <body>
 
 <div class="noise"></div>
+<div class="custom-cursor" id="cursor" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <a href="index.html" class="nav-brand" aria-label="India Avenue home">
@@ -269,6 +314,30 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 </footer>
 
 <script>
+const cursor = document.getElementById('cursor');
+if (cursor && window.matchMedia('(pointer: fine)').matches) {
+  let mx = 0, my = 0, cx = 0, cy = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cx += (mx - cx) * 0.15; cy += (my - cy) * 0.15;
+    cursor.style.left = cx + 'px'; cursor.style.top = cy + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  const navEl = document.getElementById('nav');
+  const mobileNavEl = document.getElementById('mobileNav');
+  [navEl, mobileNavEl].forEach(bar => {
+    if (!bar) return;
+    bar.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+    bar.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+  });
+  document.querySelectorAll('a, button, .menu-item, .gallery-item, .featured-card, .hour-row').forEach(el => {
+    if (el.closest('#nav') || el.closest('#mobileNav')) return;
+    el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+  });
+}
+
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
 
