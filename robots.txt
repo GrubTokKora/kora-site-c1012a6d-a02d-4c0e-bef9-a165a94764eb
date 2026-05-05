@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://staging.kora-c1012a6d-a02d-4c0e-bef9-a165a94764eb.pages.dev/sitemap.xml
