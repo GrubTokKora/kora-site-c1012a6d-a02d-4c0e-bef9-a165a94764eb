@@ -2,6 +2,15 @@
 
 <html lang="en">
 <head>
+<!-- KORA_TRACKING_GTM_HEAD_START -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5945XDSQ');</script>
+<!-- End Google Tag Manager -->
+<!-- KORA_TRACKING_GTM_HEAD_END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Lunch Specials | India Avenue</title>
@@ -9,7 +18,7 @@
 <meta content="Lunch Specials | India Avenue" property="og:title"/>
 <meta content="Discover India Avenue's Lunch Specials - a curated selection of our finest Indian dishes at special lunch prices. Available weekdays and weekends." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://www.indiaavenuegr.com/lunch-specials" property="og:url"/>
+<meta content="https://indiaavenuegr.com/lunch-specials" property="og:url"/>
 <meta content="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/c1012a6d-a02d-4c0e-bef9-a165a94764eb/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1770927826_pk3e4c.jpeg" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -17,7 +26,7 @@
 <meta content="Discover India Avenue's Lunch Specials - a curated selection of our finest Indian dishes at special lunch prices. Available weekdays and weekends." name="twitter:description"/>
 <meta content="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/c1012a6d-a02d-4c0e-bef9-a165a94764eb/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1770927826_pk3e4c.jpeg" name="twitter:image"/>
 <!-- Replace https://example.com/ with your live site URL (must match robots.txt + sitemap.xml). -->
-<link href="https://www.indiaavenuegr.com/lunch-specials" rel="canonical"/>
+<link href="https://indiaavenuegr.com/lunch-specials" rel="canonical"/>
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368_1768782091.png" rel="icon" type="image/png"/>
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368_1768782091.png" rel="shortcut icon" type="image/png"/>
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368_1768782091.png" rel="apple-touch-icon"/>
@@ -25,14 +34,14 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.indiaavenuegr.com/lunch-specials",
-  "url": "https://www.indiaavenuegr.com/lunch-specials",
+  "@id": "https://indiaavenuegr.com/lunch-specials",
+  "url": "https://indiaavenuegr.com/lunch-specials",
   "name": "Lunch Specials | India Avenue",
   "description": "Discover India Avenue's Lunch Specials - a curated selection of our finest Indian dishes at special lunch prices. Available weekdays and weekends.",
   "isPartOf": {
     "@type": "WebSite",
     "name": "India Avenue",
-    "url": "https://www.indiaavenuegr.com/lunch-specials"
+    "url": "https://indiaavenuegr.com/lunch-specials"
   }
 }</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -193,6 +202,12 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 </style>
 </head>
 <body>
+<!-- KORA_TRACKING_GTM_BODY_START -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5945XDSQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- KORA_TRACKING_GTM_BODY_END -->
 <div class="noise"></div>
 <div aria-hidden="true" class="custom-cursor" id="cursor"></div>
 <nav class="nav" id="nav">
@@ -362,5 +377,54 @@ document.querySelectorAll('.reveal, .menu-item').forEach((el, i) => {
 });
 document.getElementById("y").textContent = new Date().getFullYear();
 </script>
+<!-- KORA_TRACKING_EVENTS_START -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function trackEvent(eventName, params) {
+    window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    function cleanText(value) {
+      return (value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function toPath(href) {
+      try {
+        if (!href) return null;
+        var url = new URL(href, window.location.origin);
+        return url.pathname || '/';
+      } catch (e) {
+        return null;
+      }
+    }
+
+    document.querySelectorAll('button, a').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var clickId =
+          el.getAttribute('data-kora-click-id') ||
+          el.getAttribute('data-analytics-id') ||
+          el.getAttribute('id') ||
+          null;
+        var clickLabel =
+          el.getAttribute('data-kora-click-label') ||
+          cleanText(el.innerText || el.textContent || '') ||
+          null;
+        var href = el.getAttribute('href') || null;
+        trackEvent('button_click', {
+          click_id: clickId,
+          click_label: clickLabel,
+          page_path: window.location.pathname || '/',
+          link_url: href,
+          element_id: el.getAttribute('id') || null,
+          element_class: el.getAttribute('class') || null,
+          link_path: toPath(href),
+        });
+      });
+    });
+  });
+</script>
+<!-- KORA_TRACKING_EVENTS_END -->
 </body>
 </html>
