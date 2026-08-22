@@ -828,7 +828,16 @@ body {
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-</head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+<script>
+window.KORA_CONFIG = window.KORA_CONFIG || {};
+window.KORA_CONFIG.apiBaseUrl = "https://kora-agent.grubtok.com";
+window.KORA_CONFIG.features = window.KORA_CONFIG.features || {};
+window.KORA_CONFIG.features.voice = window.KORA_CONFIG.features.voice || {};
+window.KORA_CONFIG.features.voice.enabled = true;
+window.KORA_CONFIG.features.voice.provider = "xai";
+</script>
+</link></head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
