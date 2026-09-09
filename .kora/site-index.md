@@ -1,4 +1,4 @@
-# Site index · format 1
+# Site index · format 2
 Structure and the names of what each page offers. Values that change often — prices, hours, phone,
 address — and body copy are deliberately not recorded here; read the page itself for those.
 
@@ -68,6 +68,15 @@ sections:
 also: Dietary markers are appended to the item name itself rather than kept in a separate field, so a dish reads as "Saag Paneer GF" and renaming the dish means preserving the marker.
 also: Wines are listed as two separate rows per wine, one for the glass and one for the bottle, so a wine's name is written twice and a rename has to change both.
 also: Menu rows repeat the same markup per item, so a change to one row's structure has to be made to every row in that category.
+
+## support files
+Files that are not pages. A line marked [content] holds words or data a visitor reads, so a
+change to the site's content can land there; the rest only make the site work or look right.
+- `robots.txt` — crawler rules and the sitemap link — derived from the site by the deploy, not written by hand
+- `sitemap.xml` — the list of page URLs — derived from the site by the deploy, not written by hand
+- `assets/kora-voice/voice-client.js` — the voice assistant's connection to the API
+- `assets/kora-voice/voice-widget.css` — the voice assistant button and panel styling
+- `assets/kora-voice/voice-widget.js` — the voice assistant's on-page behaviour
 
 ## shared (every page)
 The header, navigation, mobile menu and footer are propagated from index.html to every other page by
