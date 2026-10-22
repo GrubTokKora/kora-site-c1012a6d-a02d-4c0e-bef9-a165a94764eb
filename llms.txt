@@ -1,6 +1,6 @@
 # India Avenue
 
-> India Avenue is a fine dining establishment located in Greenwich, CT, offering a sophisticated menu of traditional Indian cuisine. The restaurant serves tandoori dishes, aromatic curries, biryanis, and a variety of vegetarian and seafood options prepared with fresh ingredients.
+> India Avenue is a fine dining establishment located in Greenwich, CT, offering a sophisticated menu of traditional Indian cuisine. The restaurant prepares its dishes with fresh ingredients, featuring tandoori specialties, aromatic curries, biryanis, and a variety of vegetarian and seafood options.
 
 ## Menu
 Offers a sophisticated menu of traditional Indian cuisine, including tandoori dishes, aromatic curries, biryanis, and a variety of vegetarian and seafood options, prepared with fresh ingredients.
