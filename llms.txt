@@ -1,0 +1,33 @@
+# India Avenue
+
+> India Avenue is a fine dining establishment located in Greenwich, CT, offering a sophisticated menu of traditional Indian cuisine. The restaurant serves tandoori dishes, aromatic curries, biryanis, and a variety of vegetarian and seafood options prepared with fresh ingredients.
+
+## Menu
+Offers a sophisticated menu of traditional Indian cuisine, including tandoori dishes, aromatic curries, biryanis, and a variety of vegetarian and seafood options, prepared with fresh ingredients.
+
+## Location & Contact
+- Address: 249 Railroad Ave, Greenwich, CT 06830
+- Phone: +12037171567
+- Email: info@indiaavenuegr.com
+- Website: https://indiaavenuegr.com
+
+## Hours
+- Monday: 11:30 AM – 2:30 PM, 5:00 PM – 10:00 PM
+- Tuesday: 11:30 AM – 2:30 PM, 5:00 PM – 10:00 PM
+- Wednesday: 11:30 AM – 2:30 PM, 5:00 PM – 10:00 PM
+- Thursday: 11:30 AM – 2:30 PM, 5:00 PM – 10:00 PM
+- Friday: 11:30 AM – 2:30 PM, 5:00 PM – 10:00 PM
+- Saturday: 12:00 PM – 3:00 PM, 5:00 PM – 10:00 PM
+- Sunday: 12:00 PM – 3:00 PM, 5:00 PM – 10:00 PM
+
+## Pages
+- [India Avenue | Fine Indian Cuisine in Greenwich, CT | Naan, Roti, Soup](https://indiaavenuegr.com/)
+- [Lunch Specials](https://indiaavenuegr.com/lunch-specials)
+- [Our Menu](https://indiaavenuegr.com/menu)
+
+## Action Links
+- [Explore Menu](menu.html)
+- [Order Online](https://order.toasttab.com/online/india-avenue-249-railroad-avenue)
+
+## Social
+- [Instagram](https://www.instagram.com/indiaavenuegreenwich/)
